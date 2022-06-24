@@ -1,0 +1,18 @@
+Spiegazione "malloc_play.c" e generazione numeri casuali dopo allocazione dinamica.
+
+Il sorgente "malloc_play.c" si occupa di inizializzare 3 puntatori, insieme a 3 paramentri: min, max e sz.
+Queste variabili determinano la grandezza della memoria allocata dinamicamente tramite le chiamate di malloc e realloc, 
+con opportune chiamate alla free per evitare di sprecare memoria.
+
+Quando si effettua la stampa della porzione di memoria si nota subito una prevalenza di "0", eccezion fatta per alcune celle
+che presentano valori casuali, che tuttavia cambiano posizione a seguito delle chiamate alla funzione realloc.
+ 
+I numeri generati tuttavia cambiano solo al variare della size sz, che attraverso i valori di argc ed argv[]
+Il valore di sz è quello che passo alla funzione malloc per decretare quanto spazio mi serve, e la sua modifica genera numeri "casuali" diversi.
+
+E' possibile dunque che al variare della size sz la funzione malloc generi numeri diversi, pur dandoci una porzione di memoria non inizializzata.
+
+
+
+
+Studente: Vella Mirco - S4803218
